@@ -1,0 +1,268 @@
+:root {
+  --primary--color: #3da9fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'BPG Nino Mtavruli';
+  src: url(/fonts/bpg_nino_mtavruli_bold.ttf);
+}
+
+body {
+  background: #e5e5e5;
+}
+
+html {
+  font-family: 'BPG Nino Mtavruli';
+}
+
+::placeholder {
+  color: white;
+}
+
+.parent__container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__background {
+  width: 57%;
+  height: 174px;
+  background-color: var(--primary--color);
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.search__todo--items {
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.22);
+  width: 50%;
+  height: 50px;
+  border-radius: 10vh;
+  color: #fff;
+  border-color: black;
+  padding-left: 2vh;
+  font-family: 'BPG Nino Mtavruli';
+  font-size: large;
+}
+
+.todo__container--items {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.main__container {
+  width: 57%;
+  height: 49.5rem;
+  background-color: #fff;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.todo__item {
+  margin-top: 2vh;
+  padding: 4vh;
+  justify-content: space-between;
+  display: flex;
+}
+
+.add__todo--btn {
+  position: absolute;
+  z-index: 1000;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary--color);
+  margin-left: 2vh;
+  border-radius: 50px;
+  border-color: var(--primary--color);
+  font-size: 5vh;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add__todo--btn:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.fas {
+  color: #ef4565;
+  font-size: 3vh;
+  cursor: pointer;
+}
+
+.todo__add--popup {
+  background-color: var(--primary--color);
+  width: 40%;
+  height: 25rem;
+  color: white;
+  border-radius: 20px;
+  transition: all 1s ease;
+  box-shadow: 0 3rem 5rem rgb(0 0 0 / 30%);
+  animation: popup 0.7s;
+  position: fixed;
+  top: 19%;
+  /* z-index: 1000; */
+  z-index: 10000;
+  display: none;
+}
+
+.x__close--btn {
+  width: 1px;
+  right: 2;
+  cursor: pointer;
+  padding-left: 9px;
+  font-size: xx-large;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0) rotate(360deg);
+  }
+  60% {
+    transform: scale(0.8) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.parent__todo--popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo__fields {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.todo__create--btn {
+  padding: 2vh;
+  margin-top: 60px;
+  background-color: white;
+  color: var(--primary--color);
+  font-family: 'BPG Nino Mtavruli';
+  font-size: 20px;
+  border-color: rgb(0, 0, 0);
+  border-radius: 4%;
+  cursor: pointer;
+}
+
+.todo__create--btn:hover {
+  transition: 0.5s;
+  background-color: var(--primary--color);
+  color: #fff;
+}
+
+.todo__txt--title {
+  padding: 2vh;
+  border-color: rgb(0, 0, 0);
+  border-radius: 4%;
+  border-color: rgba(9, 64, 103, 1);
+  font-family: 'BPG Nino Mtavruli';
+  font-size: 2vh;
+  text-align: left;
+}
+
+.todo__txt--title::placeholder {
+  color: black;
+}
+
+#todo__edit {
+  color: var(--primary--color);
+}
+
+.completed__task {
+  display: none;
+  color: #09cd21;
+}
+
+#check__todo {
+  color: red;
+}
+
+#check {
+  color: #09cd21;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.not-checked {
+  text-decoration: none;
+}
+
+/*media sizes*/
+
+@media (max-width: 1023px) {
+  .header__background {
+    width: 100%;
+  }
+  .main__container {
+    width: 100%;
+  }
+  .search__todo--items {
+    width: 80%;
+  }
+  * {
+    font-size: large;
+  }
+}
+
+@media (max-width: 844px) {
+  .todo__fields {
+    padding: 25%;
+  }
+  .todo__txt--title {
+    padding: 1vh;
+  }
+  .todo__create--btn {
+    padding: 1vh;
+  }
+  .todo__add--popup {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .todo__add--popup {
+    width: 80%;
+  }
+  .todo__txt--title {
+    padding: 0.8vh;
+  }
+  .todo__create--btn {
+    padding: 0.8vh;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 333px) {
+  .todo__add--popup {
+    width: 95%;
+  }
+  .todo__txt--title {
+    padding: 0.5vh;
+  }
+  .todo__create--btn {
+    padding: 0.5vh;
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="parent__container">
+      <div class="header__background">
+        <h2>Todo list (მოქმედებები)</h2>
+        <input
+          type="search"
+          placeholder="მოძებნე..."
+          class="search__todo--items"
+        />
+      </div>
+    </div>
+    <div class="todo__container--items">
+      <div class="main__container">
+        <div class="todo__items">
+          <div class="todo__item">
+            <h2 class="todo__txt">Spiderman</h2>
+            <div class="check__icons">
+              <i class="fas fa-trash-alt" id="btn" title="წაშლა"></i>
+              <i
+                class="fas fa-edit"
+                id="todo__edit"
+                title="დეტალების შეცვლა"
+              ></i>
+            </div>
+          </div>
+          <hr class="todo__line" />
+          <div class="todo__item">
+            <h2 class="todo__txt">Fast and furious</h2>
+            <div class="check__icons">
+              <i class="fas fa-trash-alt" id="btn" title="წაშლა"></i>
+              <i
+                class="fas fa-edit"
+                id="todo__edit"
+                title="დეტალების შეცვლა"
+              ></i>
+            </div>
+          </div>
+          <hr class="todo__line" />
+          <div class="todo__item">
+            <h2 class="todo__txt">Godzilla vs kong</h2>
+            <div class="check__icons">
+              <i class="fas fa-trash-alt" id="btn" title="წაშლა"></i>
+              <i
+                class="fas fa-edit"
+                id="todo__edit"
+                title="დეტალების შეცვლა"
+              ></i>
+            </div>
+          </div>
+          <hr class="todo__line" />
+        </div>
+        <div class="parent__todo--popup">
+          <div class="todo__add--popup">
+            <h1 class="x__close--btn">X</h1>
+            <div class="todo__fields">
+              <h3>მოქმედება</h3>
+              <input
+                type="text"
+                class="todo__txt--title"
+                placeholder="..."
+                maxlength="30"
+              />
+              <br />
+              <input type="button" value="დამატება" class="todo__create--btn" />
+            </div>
+          </div>
+        </div>
+        <input
+          type="button"
+          class="add__todo--btn"
+          value="+"
+          title="დამატება"
+        />
+      </div>
+    </div>
+  </body>
+</html>
